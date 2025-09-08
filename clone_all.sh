@@ -11,7 +11,7 @@ clone_repo() {
     local url=$1
     local path=$2
     echo "正在克隆: $path"
-    if git -q clone "$url" "$path"; then
+    if git clone -q "$url" "$path"; then
         echo "✓ 成功: $path"
     else
         echo "✗ 失败: $path"
