@@ -10,9 +10,10 @@ echo "=========================================="
 clone_repo() {
     local url=$1
     local path=$2
-    echo "正在克隆: $path"
-    if git clone -q "$url" "$path"; then
-        echo "✓ 成功: $path"
+#   echo "正在克隆: $path"
+    if git clone -q "$url" "$path"; then 
+        #echo "✓ 成功: $path"
+        return 0
     else
         echo "✗ 失败: $path"
         return 1
@@ -56,6 +57,6 @@ clone_repo "https://github.com/ZHO-ZHO-ZHO/ComfyUI-SDXL_Art_Library-Button.git" 
 clone_repo "https://github.com/trumanwong/ComfyUI-NSFW-Detection.git" "custom_nodes/ComfyUI-NSFW-Detection"
 clone_repo "https://github.com/AlekPet/ComfyUI_Custom_Nodes_AlekPet.git" "custom_nodes/ComfyUI_Custom_Nodes_AlekPet"
 
-echo "=========================================="
+#echo "=========================================="
 echo "所有仓库克隆完成！"
-echo "请检查是否有失败的克隆操作。"
+#echo "请检查是否有失败的克隆操作。"
