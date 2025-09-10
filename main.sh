@@ -56,7 +56,7 @@ clone_repo "https://github.com/AlekPet/ComfyUI_Custom_Nodes_AlekPet.git" "custom
 echo "所有仓库克隆完成！"
 
 # 转到 ComfyUI 目录并执行命令
-cd -q /kaggle/working/ComfyUI || exit 1
+cd /kaggle/working/ComfyUI || exit 1
 
 # 执行 Python 命令并隐藏控制台输出
 python ./pinggy/pinggy.py --command='python main.py > nul 2>&1' --port=8188
