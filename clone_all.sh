@@ -3,7 +3,7 @@
 # ComfyUI 子模块批量克隆脚本
 # 保存为 clone_all.sh 后在终端运行: chmod +x clone_all.sh && ./clone_all.sh
 
-#echo "开始克隆所有 ComfyUI 自定义节点..."
+echo "开始克隆所有 ComfyUI 自定义节点..."
 #echo "=========================================="
 
 # 定义克隆函数，带错误处理
