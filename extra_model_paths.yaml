@@ -9,13 +9,13 @@ a111:
     configs: models/Stable-diffusion
     vae: models/VAE
     loras: |
-        rosmontis-yinlv          # <-- 改为4个空格
-        models/Lora              # <-- 改为4个空格
-        models/LyCORIS           # <-- 改为4个空格
+        rosmontis-yinlv
+        models/Lora
+        models/LyCORIS
     upscale_models: |
-        models/ESRGAN            # <-- 改为4个空格
-        models/RealESRGAN        # <-- 改为4个空格
-        models/SwinIR            # <-- 改为4个空格
+        models/ESRGAN
+        models/RealESRGAN
+        models/SwinIR
     embeddings: embeddings
     hypernetworks: models/hypernetworks
     controlnet: models/ControlNet
