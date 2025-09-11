@@ -9,8 +9,17 @@ echo "仓库克隆中，请耐心等待...☕☕☕"
 clone_repo() {
     local url=$1
     local path=$2
+    
+    # 检查目标路径是否已经存在
+    if [[ -d "$path" ]]; then
+        #echo "✓ 已存在，跳过: $path"
+        return 0
+    fi
+    
     # 使用 git clone 克隆仓库
+    #echo "正在克隆: $path"
     if git clone -q "$url" "$path"; then 
+        #echo "✓ 成功: $path"
         return 0
     else
         echo "✗ 失败: $path"
