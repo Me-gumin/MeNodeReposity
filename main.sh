@@ -4,6 +4,8 @@
 # 保存为 clone_all.sh 后在终端运行: chmod +x main.sh && ./main.sh
 
 # 定义克隆函数，带错误处理
+echo "当前时间: $(date "+%Y-%m-%d %A %H:%M:%S")"
+echo "仓库克隆中，请耐心等待...☕☕☕"
 clone_repo() {
     local url=$1
     local path=$2
@@ -54,9 +56,10 @@ clone_repo "https://github.com/AlekPet/ComfyUI_Custom_Nodes_AlekPet.git" "custom
 
 # 输出克隆完成的信息
 echo "所有仓库克隆完成！"
-
+echo "当前时间: $(date "+%Y-%m-%d %A %H:%M:%S")"
 # 转到 ComfyUI 目录并执行命令
 cd /kaggle/working/ComfyUI || exit 1
 
 # 执行 Python 命令并隐藏控制台输出
+echo "启动ComfyUI..."
 python ./pinggy/pinggy.py --command='python main.py > nul 2>&1' --port=8188
