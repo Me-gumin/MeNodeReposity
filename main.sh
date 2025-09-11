@@ -49,7 +49,7 @@ clone_repo "https://github.com/bash-j/mikey_nodes.git" "custom_nodes/mikey_nodes
 clone_repo "https://github.com/rgthree/rgthree-comfy.git" "custom_nodes/rgthree-comfy"
 clone_repo "https://github.com/Stability-AI/stability-ComfyUI-nodes.git" "custom_nodes/stability-ComfyUI-nodes"
 clone_repo "https://github.com/WASasquatch/was-node-suite-comfyui" "custom_nodes/was-node-suite-comfyui"
-clone_repo "https://github.com/wandaweb/jupyter-webui-tunneling.git" "pinggy"
+#clone_repo "https://github.com/wandaweb/jupyter-webui-tunneling.git" "pinggy"
 clone_repo "https://github.com/ZHO-ZHO-ZHO/ComfyUI-SDXL_Art_Library-Button.git" "web/extensions/SDXL_Art_Library_Zho"
 clone_repo "https://github.com/trumanwong/ComfyUI-NSFW-Detection.git" "custom_nodes/ComfyUI-NSFW-Detection"
 clone_repo "https://github.com/AlekPet/ComfyUI_Custom_Nodes_AlekPet.git" "custom_nodes/ComfyUI_Custom_Nodes_AlekPet"
@@ -62,4 +62,5 @@ cd /kaggle/working/ComfyUI || exit 1
 
 # 执行 Python 命令并隐藏控制台输出
 echo "启动ComfyUI..."
-python ./pinggy/pinggy.py --command='python main.py > nul 2>&1' --port=8188
+#python ./pinggy/pinggy.py --command='python main.py > nul 2>&1' --port=8188
+python pinggy.py --command='python main.py > nul 2>&1' --port=8188

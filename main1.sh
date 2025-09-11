@@ -4,6 +4,8 @@
 # 保存为 clone_all.sh 后在终端运行: chmod +x main.sh && ./main.sh
 
 # 定义克隆函数，带错误处理
+echo "当前时间: $(date "+%Y-%m-%d %A %H:%M:%S")"
+echo "仓库克隆中，请耐心等待...☕☕☕"
 clone_repo() {
     local url=$1
     local path=$2
@@ -47,16 +49,18 @@ clone_repo "https://github.com/bash-j/mikey_nodes.git" "custom_nodes/mikey_nodes
 clone_repo "https://github.com/rgthree/rgthree-comfy.git" "custom_nodes/rgthree-comfy"
 clone_repo "https://github.com/Stability-AI/stability-ComfyUI-nodes.git" "custom_nodes/stability-ComfyUI-nodes"
 clone_repo "https://github.com/WASasquatch/was-node-suite-comfyui" "custom_nodes/was-node-suite-comfyui"
-clone_repo "https://github.com/wandaweb/jupyter-webui-tunneling.git" "pinggy"
+#clone_repo "https://github.com/wandaweb/jupyter-webui-tunneling.git" "pinggy"
 clone_repo "https://github.com/ZHO-ZHO-ZHO/ComfyUI-SDXL_Art_Library-Button.git" "web/extensions/SDXL_Art_Library_Zho"
 clone_repo "https://github.com/trumanwong/ComfyUI-NSFW-Detection.git" "custom_nodes/ComfyUI-NSFW-Detection"
 clone_repo "https://github.com/AlekPet/ComfyUI_Custom_Nodes_AlekPet.git" "custom_nodes/ComfyUI_Custom_Nodes_AlekPet"
 
 # 输出克隆完成的信息
 echo "所有仓库克隆完成！"
-
+echo "当前时间: $(date "+%Y-%m-%d %A %H:%M:%S")"
 # 转到 ComfyUI 目录并执行命令
 cd /kaggle/working/ComfyUI || exit 1
 
 # 执行 Python 命令并隐藏控制台输出
-python ./pinggy/pinggy.py --command='python main.py > nul' --port=8188
+echo "启动ComfyUI..."
+#python ./pinggy/pinggy.py --command='python main.py > nul 2>&1' --port=8188
+python pinggy.py --command='python main.py' --port=8188
