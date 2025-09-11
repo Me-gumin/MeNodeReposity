@@ -31,10 +31,10 @@ def print_url():
                     found = True
     if not found:
         print_url()
-    else:
-        with open('log.txt', 'r') as file:
-            for line in file:
-                print(line)
+    #else:
+        #with open('log.txt', 'r') as file:
+           # for line in file:
+                #print(line)
     
 def find_and_terminate_process(port):
     for process in psutil.process_iter(['pid', 'name', 'connections']):
@@ -53,8 +53,8 @@ def main():
     parser.add_argument('--port', help='Specify the port')
     args = parser.parse_args()
     
-    print(args.port)
-    print(args.command)
+    #print(args.port)
+    #print(args.command)
     env = os.environ.copy()
     target_port = args.port
     command = args.command
@@ -62,6 +62,7 @@ def main():
         find_and_terminate_process(int(target_port))
     else:
         print(f"Port {target_port} is free.")
+	
     
     open('log.txt', 'w').close()
     p_app = Process(target=run_app, args=(env, command, target_port,))
