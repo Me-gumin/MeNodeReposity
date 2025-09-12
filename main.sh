@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ComfyUI 子模块批量克隆脚本
-# 保存为 clone_all.sh 后在终端运行: chmod +x main.sh && ./main.sh
+# 保存为 main.sh 后在终端运行: chmod +x main.sh && ./main.sh
 
 # 定义克隆函数，带错误处理
 echo "当前时间: $(date "+%Y-%m-%d %A %H:%M:%S")"
@@ -71,5 +71,6 @@ cd /kaggle/working/ComfyUI || exit 1
 
 # 执行 Python 命令并隐藏控制台输出
 echo "启动ComfyUI..."
-#python ./pinggy/pinggy.py --command='python main.py > nul 2>&1' --port=8188
-python pinggy.py --command='python main.py > nul 2>&1' --port=8188
+#python ./pinggy/pinggy.py --command='python main.py  > nul 2>&1' --port=8188
+#保留错误提示信息
+python pinggy.py --command='python main.py --disable-metadata > nul' --port=8188
