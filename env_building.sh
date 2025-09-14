@@ -113,6 +113,7 @@ clone_repo "https://github.com/WASasquatch/was-node-suite-comfyui" "custom_nodes
 clone_repo "https://github.com/ZHO-ZHO-ZHO/ComfyUI-SDXL_Art_Library-Button.git" "web/extensions/SDXL_Art_Library_Zho"
 clone_repo "https://github.com/trumanwong/ComfyUI-NSFW-Detection.git" "custom_nodes/ComfyUI-NSFW-Detection"
 clone_repo "https://github.com/AlekPet/ComfyUI_Custom_Nodes_AlekPet.git" "custom_nodes/ComfyUI_Custom_Nodes_AlekPet"
+clone_repo "https://github.com/Me-gumin/MeComfyuiEncrypt.git" "custom_nodes/MeComfyuiEncrypt"
 
 echo "所有仓库克隆完成！"
 echo "当前时间: $(date "+%Y-%m-%d %A %H:%M:%S")"

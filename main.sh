@@ -58,10 +58,10 @@ clone_repo "https://github.com/bash-j/mikey_nodes.git" "custom_nodes/mikey_nodes
 clone_repo "https://github.com/rgthree/rgthree-comfy.git" "custom_nodes/rgthree-comfy"
 clone_repo "https://github.com/Stability-AI/stability-ComfyUI-nodes.git" "custom_nodes/stability-ComfyUI-nodes"
 clone_repo "https://github.com/WASasquatch/was-node-suite-comfyui" "custom_nodes/was-node-suite-comfyui"
-#clone_repo "https://github.com/wandaweb/jupyter-webui-tunneling.git" "pinggy"
 clone_repo "https://github.com/ZHO-ZHO-ZHO/ComfyUI-SDXL_Art_Library-Button.git" "web/extensions/SDXL_Art_Library_Zho"
 clone_repo "https://github.com/trumanwong/ComfyUI-NSFW-Detection.git" "custom_nodes/ComfyUI-NSFW-Detection"
 clone_repo "https://github.com/AlekPet/ComfyUI_Custom_Nodes_AlekPet.git" "custom_nodes/ComfyUI_Custom_Nodes_AlekPet"
+clone_repo "https://github.com/Me-gumin/MeComfyuiEncrypt.git" "custom_nodes/MeComfyuiEncrypt"
 
 # 输出克隆完成的信息
 echo "所有仓库克隆完成！"
