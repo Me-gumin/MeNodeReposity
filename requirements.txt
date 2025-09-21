@@ -95,10 +95,20 @@ pylibcugraph-cu12==25.2.0
 simpleeval==1.0.3
 
 #add
+aiosqlite
+natsort
+uuid7
+alembic
 ultralytics>=8.3.162
 opencv-python-headless
 dill
 pycryptodome
 OpenEXR
 segment-anything
+
+#SAM2
 git+https://github.com/facebookresearch/sam2
+
+
+
+
