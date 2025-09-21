@@ -68,7 +68,7 @@ fi
 # 安装依赖
 echo "安装依赖中..."
 if [[ -f "custom_nodes/MeNodeReposity/requirements.txt" ]]; then
-    pip install -q -r ./custom_nodes/MeNodeReposity/requirements.txt > /dev/null 2>&1
+    pip install -q -r ./custom_nodes/MeNodeReposity/requirements.txt
     echo "依赖安装完成！"
     echo "当前时间: $(date "+%Y-%m-%d %A %H:%M:%S")"
 else
