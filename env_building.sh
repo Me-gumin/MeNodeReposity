@@ -52,15 +52,6 @@ if [[ ! -d "custom_nodes/MeNodeReposity" ]]; then
 fi
 
 # 移动文件
-if [[ -f "custom_nodes/MeNodeReposity/main.sh" ]]; then
-    mv custom_nodes/MeNodeReposity/main.sh ./
-    chmod +x main.sh
-fi
-
-if [[ -f "custom_nodes/MeNodeReposity/extra_model_paths.yaml" ]]; then
-    mv custom_nodes/MeNodeReposity/extra_model_paths.yaml ./
-fi
-
 if [[ -f "custom_nodes/MeNodeReposity/pinggy.py" ]]; then
     mv custom_nodes/MeNodeReposity/pinggy.py ./
 fi
