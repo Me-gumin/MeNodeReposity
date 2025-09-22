@@ -105,10 +105,30 @@ dill
 pycryptodome
 OpenEXR
 segment-anything
+asteval
+scikit_image
+scikit_learn
+opencv-contrib-python
+pymatting
+colour-science
+blend_modes
+loguru
+lark-parser
+imageio-ffmpeg
+rembg[gpu]
+trimesh>=4.0.5
+json-repair
+bitsandbytes
+scenedetect[opencv-headless]
+hydra-core>=1.3.2
+loralib>=0.1.2
+faster_whisper
+
+
 
 #SAM2
-git+https://github.com/facebookresearch/sam2
-
-
+git+https://github.com/facebookresearch/sam2.git
+git+https://github.com/shadowcz007/SenseVoice-python.git
+git+https://github.com/openai/swarm.git
 
 
