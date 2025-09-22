@@ -17,7 +17,7 @@ clone_repo() {
     fi
     
     #echo "正在克隆: $path"
-    if git clone -q "$url" "$path"; then 
+    if git clone  -q "$url" "$path" --recursive; then 
         #echo "✓ 成功: $path"
         sum=$((sum + 1))
         return 0
@@ -123,14 +123,18 @@ clone_repo "https://github.com/asagi4/comfyui-prompt-control.git" "custom_nodes/
 
 clone_repo "https://github.com/BlenderNeko/ComfyUI_ADV_CLIP_emb.git" "custom_nodes/ComfyUI_ADV_CLIP_emb"
 clone_repo "https://github.com/Extraltodeus/sigmas_tools_and_the_golden_scheduler.git" "custom_nodes/sigmas_tools"
+clone_repo "https://github.com/ssitu/ComfyUI_UltimateSDUpscale.git" "custom_nodes/ComfyUI_UltimateSDUpscale"
 
 clone_repo "https://github.com/chflame163/ComfyUI_LayerStyle.git" "custom_nodes/CComfyUI_LayerStyle"
 clone_repo "https://github.com/MixLabPro/comfyui-mixlab-nodes.git" "custom_nodes/comfyui-mixlab-nodes"
-clone_repo "https://github.com/Coyote-A/ultimate-upscale-for-automatic1111.git" "custom_nodes/ultimate-upscale-for-automatic1111"
 clone_repo "https://github.com/TinyTerra/ComfyUI_tinyterraNodes.git" "custom_nodes/ComfyUI_tinyterraNodes"
 clone_repo "https://github.com/Derfuu/Derfuu_ComfyUI_ModdedNodes.git" "custom_nodes/Derfuu_ComfyUI_ModdedNodes"
 clone_repo "https://github.com/giriss/comfy-image-saver.git" "custom_nodes/comfy-image-saver"
 clone_repo "https://github.com/shiimizu/ComfyUI_smZNodes.git" "custom_nodes/ComfyUI_smZNodes"
+
+clone_repo "https://github.com/storyicon/comfyui_segment_anything.git" "custom_nodes/comfyui_segment_anything"
+clone_repo "https://github.com/KohakuBlueleaf/z-tipo-extension.git" "custom_nodes/z-tipo-extension"
+clone_repo "https://github.com/evanspearman/ComfyMath.git" "custom_nodes/ComfyMath"
 
 echo "所有仓库克隆完成！（共$sum个）"
 echo "当前时间: $(date "+%Y-%m-%d %A %H:%M:%S")"
